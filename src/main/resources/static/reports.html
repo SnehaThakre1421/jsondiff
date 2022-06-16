@@ -17,8 +17,18 @@
 <body>
     <div class="buttons">
     <div>
-      <label>TransactionId : </label>
-      <input type="text" name="transactionId" id="transactionId_text">
+     	<label> Input Key : </label>
+      <input type="text" name="inputkey" id="inputkey_text">
+    </div>
+      <div>
+      <label> Value : </label>
+      <input type="text" name="inputkey" id="value_text">
+      </div>
+      <div>
+      <label> Date : </label>
+      <input type="text" name="date" id="date_text">
+      </div>
+      <div>
       <button type=button id="submit">Submit</button>
     </div>
     <div>
@@ -26,55 +36,8 @@
       <input id="clear" type="button" value="Clear">
     </div>
   </div>
-  <div class="json-input">
-    <div id="json-panel-left">
-    
-      <label for="json-input-left">
-        <h2>Legacy Response</h2>
-      </label>
-      <!-- <button class="prettyfy" type="button" title="Pretty print">{ }</button> -->
-      <textarea id="json-input-left">
-        
-      </textarea>
-      <span class="error-message"></span>
-    </div>
-    <div id="json-panel-right">
-      <label for="json-input-right">
-        <h2>Microservice Response</h2>
-      </label>
-      <!-- <button class="prettyfy" type="button" title="Pretty print">{ }</button> -->
-      <textarea id="json-input-right">
-       
-      </textarea>
-      <span class="error-message"></span>
-    </div>
-  </div>
-  <div id="results">
-    
-    <div id="delta-panel-visual">
-      <div class="header-options">
-        <input id="showunchanged" type="checkbox">
-        <label for="showunchanged">
-          Show unchanged values
-        </label>
-      </div>
-      <p id="visualdiff">
-      </p>
-    </div>
-    <div id="delta-panel-annotated" style="display: none;">
-      <p id="annotateddiff">
-      </p>
-    </div>
-    <div id="delta-panel-json" style="display: none;">
-      <p>
-        (<span id="jsondifflength"></span>
-        KB)
-      </p>
-      <textarea id="json-delta" readonly>
-      </textarea>
-      <span class="error-message"></span>
-    </div>
-  </div>
+ 
+ 
   
   <script type="text/javascript" src="demo.js"></script>
 
