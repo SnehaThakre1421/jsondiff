@@ -5,31 +5,34 @@ function showError(error){
 }
 async function getData(date, value, inputKey){
   // TODO - correct the url here
-  // let url = `xyz?date=${date}&value=${value}&inputKey=${inputKey}`
-  // let response = await fetch(url)
-  // let transactionList = response.json()
+   let url = 'http://localhost:9000/reports'//`xyz?date=${date}&value=${value}&inputKey=${inputKey}`
+   let response = await fetch(url)
+   let transactionList = response.json()
+   
   // return transactionList
-
+/*
   let transactionList = [{
     id:123456,
     api:"ClaimService: getAmosMailOrderSummaryApi"
   },{id: 098765, api:"ClaimService: getAmosMailOrderDetailApi"}]
-
+*/
   return transactionList
 
 }
 
 function insertData(transactionList){
-
+	
   let tableRef = $("#transactionList")
-
+let isCompared = false;
   transactionList.forEach((transaction)=>{
-    let url = `../jdd-master/index.html?transactionid=${transaction.id}`
+    let url = `../jdd-master/json_compare.html?transactionid=${transaction.key}`
     let row =`
     <tr>
-      <th scope="row">${transaction.id}</th>
-      <td>${transaction.api}</td>
-      <td><a href="${url}"><i class="bi-box-arrow-up-right"></i></a></td>
+      <th scope="row">${transaction.key}</th>
+      <td>${transaction.serviceName}</td>
+      <!--<td><a href="${url}"><i class="bi-box-arrow-up-right"></i></a></td>-->
+      <td><a href="${url}">View</i></a></td>
+      <td><a >${isCompared}</i></a></td>
     </tr>
     `
     // let row = ` <tr>

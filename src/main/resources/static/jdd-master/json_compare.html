@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>JSON Diff - The semantic JSON compare tool</title>
+
+	<link rel="stylesheet" href="reset.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="throbber.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="jdd.css" type="text/css" media="screen">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"
+		charset="utf-8"></script>
+
+	<script src="jsl/jsl.format.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jsl/jsl.parser.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jdd.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+
+<body>
+
+	<!--<div id="main" style="position: relative; overflow: hidden";>-->
+	<div style="position: relative;" id="headerDiv"><object type="text/html" data="../headerfooter/header.html"
+			style="overflow: auto; width: 100%; height: 100%;position: relative;"></object></div>
+	<div class="topnav">
+
+		<a class="active" href="../reports/index.html">Home</a>
+		<a href="../reports/comparereport.html">Compare Report</a>
+		a<a href="../transcationlisting/reportsList.html">Result</a>
+	</div>
+
+	<div id="initdiv" class="initContainer">
+		<div id="initleft" class="left">
+			<!-- <textarea spellcheck="false" id="textarealeft" placeholder="Enter JSON to compare, enter an URL to JSON" tabindex="1"></textarea> -->
+			<pre id="errorLeft" class="error"></pre>
+		</div id="initleft">
+
+		<!--<div class="center">
+                    <button id="compare" tabindex="3">Compare</button>
+                    <div class="throbber-loader"></div>
+                    <br/><br/>
+                    or try some<br /><a href="#" id="sample">sample data</a>
+                </div>-->
+
+		<div id="initright" class="right">
+			<!-- <textarea spellcheck="false" class="right" id="textarearight" placeholder="Enter JSON to compare, enter an URL to JSON" tabindex="2"></textarea> -->
+			<pre id="errorRight" class="error"></pre>
+		</div id="initright">
+	</div>
+
+	<div class="diffcontainer">
+		<div id="report">
+		</div>
+		<pre id="out" class="left" class="codeBlock"></pre>
+		<pre id="out2" class="right" class="codeBlock"></pre>
+		<ul id="toolbar" class="toolbar"></ul>
+	</div>
+	<!-- </div>-->
+
+</body>
+<div id="footpgl1" class="footer-outer x1a">
+	<div>
+		<div id="T:ftpl1" class="footer-container" style="width:100% ">
+			<div id="T:ftpgl1" class="footer-content hide-mobile"><a id="T:cvsigl1" title="CVS Health"
+					class="footer-desk-img xgl" data-afr-fcs="true" href="https://www.cvshealth.com" target="_blank">
+					<!--<img id="T:cvsigl1::icon" src="https://mylife.cvshealth.com/mylife/ucm/topimages/cvs-health-new.png"
+						title="CVS Health" alt="CVS Health" class="xgm"></a>-->
+				<div id="T:fepg1" class="footer-nav">
+					<a class="footer-linksstyle footer-golinks" href="/webcenter/portal/mylife/Home/Help"
+						id="fegl2">Terms &amp; Conditions |</a>
+					<a class="footer-linksstyle footer-golinks" href="/webcenter/portal/mylife/Home/PrivacyPolicy"
+						id="fegl3">Privacy Policy |</a><a data-afr-tlen="8" id="T:cil2" class="feedback-link xej"
+						onclick="return false;" data-afr-fcs="true" href="#">Feedback</a><span class="copyright">|
+						Copyright © 2020 CVS Health. All rights reserved</span>
+				</div>
+			</div>
+
+</html>
